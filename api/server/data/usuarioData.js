@@ -5,13 +5,19 @@ exports.getUsuarios = async function () {
 };
 
 exports.savePost = async function (post) {
-    return database.query('INSERT INTO produtos (produto, preço) VALUES ($1, $2) returning *', [post.produto, post.preço]);
+    return database.query(`INSERT INTO usuarios_cadastrados (name, email, telefone, senha, date_create) 
+                           VALUES ($1, $2, $3, $4, $5) returning *`, 
+                           [post.name, post.email, post.telefone, post.senha, post.date_create]
+                         );
 };
 
-exports.deletePost = async function (id) {
-    return database.query('DELETE FROM produtos where id = $1', [id]);
+exports.deletePost = async function (id_usuario_cadastrado) {
+    return database.query('DELETE FROM usuarios_cadastrados where id_usuario_cadastrado = $1', [id_usuario_cadastrado]);
 };
 
-exports.updatePost = function (id, post) {
-	return database.query('UPDATE produtos SET produto = $1, preço = $2 where id = $3', [post.produto, post.preço, id]);
+exports.updatePost = function (id_usuario_cadastrado, post) {
+	return database.query(`UPDATE usuarios_cadastrados 
+                           SET name = $1, email = $2, telefone = $3, date_update = $4 where id_usuario_cadastrado = $5 returning *`, 
+                           [post.name, post.email, post.telefone, post.date_update, id_usuario_cadastrado]
+                         );
 };

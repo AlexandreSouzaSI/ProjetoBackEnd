@@ -12,18 +12,18 @@ router.get('/usuarios', async function (req, res) {
 router.post('/usuarios/inserir', async function (req, res) {
     const post = req.body;
     console.log(post)
-    const newPost = await postsService.savePost(post)
+    const newPost = await usuariosService.savePost(post)
     res.status(201).json(newPost);
 });
 
-router.delete('/produtos/delete/:id', async function (req, res) {
-    await postsService.deletePost(req.params.id);
+router.delete('/usuarios/delete/:id_usuario_cadastrado', async function (req, res) {
+    await usuariosService.deletePost(req.params.id_usuario_cadastrado);
     res.status(204).end();
 });
 
-router.put('/produtos/alterar/:id', async function (req, res) {
+router.put('/usuarios/alterar/:id_usuario_cadastrado', async function (req, res) {
     const post = req.body;
-	await postsService.updatePost(req.params.id, post);
+	await usuariosService.updatePost(req.params.id_usuario_cadastrado, post);
 	res.status(204).end();
 });
 
