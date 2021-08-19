@@ -3,7 +3,7 @@ DELETE http://localhost:3000/produtos/delete/111
 
 ###
 
-DELETE http://localhost:3000/usuarios/delete/4
+DELETE http://localhost:3000/usuarios/delete/6
 
 ###
 
