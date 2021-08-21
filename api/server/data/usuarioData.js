@@ -1,5 +1,6 @@
 const database = require('../infra/database');
 
+
 exports.getUsuario = async function () {
     return database.query('SELECT * FROM usuarios_cadastrados');
 };
@@ -7,7 +8,7 @@ exports.getUsuario = async function () {
 exports.saveUsuario = async function (post) {
     return database.query(`INSERT INTO usuarios_cadastrados (name, email, telefone, senha, date_create) 
                            VALUES ($1, $2, $3, $4, $5) returning *`, 
-                           [post.name, post.email, post.telefone, post.senha, post.date_create]
+                           [post.name, post.email, post.telefone, post.senha , post.date_create]
                          );
 };
 

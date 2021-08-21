@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const usuariosService = require('../service/usuariosService');
-
+const crypto = require('crypto')
 
 router.get('/usuario', async function (req, res) {
     const posts = await usuariosService.getUsuario();
@@ -10,10 +10,14 @@ router.get('/usuario', async function (req, res) {
 
 router.post('/usuario/inserir', async function (req, res) {
     const post = req.body;
-    console.log(post)
-    const newPost = await usuariosService.saveUsuario(post)
+    const hashAd = crypto
+            .createHash("sha256")
+            .update(req.body.senha)
+            .digest("hex");
+    const newPost = usuariosService.saveUsuario(post, post.senha = hashAd);
+    console.log(post);
     res.status(201).json(newPost);
-});
+    });
 
 router.delete('/usuario/delete/:id_usuario_cadastrado', async function (req, res) {
     await usuariosService.deleteUsuario(req.params.id_usuario_cadastrado);
