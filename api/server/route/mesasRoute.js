@@ -4,26 +4,26 @@ const mesasService = require('../service/mesasService');
 
 
 
-router.get('/mesas', async function (req, res) {
-    const posts = await mesasService.getMesas();
+router.get('/mesa', async function (req, res) {
+    const posts = await mesasService.getMesa();
     res.json(posts);
 });
 
 router.post('/mesa/inserir', async function (req, res) {
     const post = req.body ;
     console.log(post);
-    const newPost = await mesasService.savePost(post)
+    const newPost = await mesasService.saveMesa(post)
     res.status(201).json(newPost);
 });
 
 router.delete('/mesa/delete/:id_mesa', async function (req, res) {
-    await mesasService.deletePost(req.params.id_mesa);
+    await mesasService.deleteMesa(req.params.id_mesa);
     res.status(204).end();
 });
 
 router.put('/mesa/alterar/:id_mesa', async function (req, res) {
     const post = req.body;
-	await mesasService.updatePost(req.params.id_mesa, post);
+	await mesasService.updateMesa(req.params.id_mesa, post);
 	res.status(204).json(post);
 });
 

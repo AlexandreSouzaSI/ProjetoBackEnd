@@ -1,29 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const formapagamentoService = require('../service/formapagamentoService');
+const formaPagamentoService = require('../service/formaPagamentoService');
 
 
 
 router.get('/formapagamento', async function (req, res) {
-    const posts = await formapagamentoService.getFormapagamento();
+    const posts = await formaPagamentoService.getFormapagamento();
     res.json(posts);
 });
 
 router.post('/formapagamento/inserir', async function (req, res) {
     const post = req.body;
     console.log(post)
-    const newPost = await formapagamentoService.savePost(post)
+    const newPost = await formaPagamentoService.saveFormapagamento(post)
     res.status(201).json(newPost);
 });
 
 router.delete('/formapagamento/delete/:id_forma_pagamento', async function (req, res) {
-    await formapagamentoService.deletePost(req.params.id_forma_pagamento);
+    await formaPagamentoService.deleteFormapagamento(req.params.id_forma_pagamento);
     res.status(204).end();
 });
 
 router.put('/formapagamento/alterar/:id_forma_pagamento', async function (req, res) {
     const post = req.body;
-	await formapagamentoService.updatePost(req.params.id_forma_pagamento, post);
+	await formaPagamentoService.updateFormapagamento(req.params.id_forma_pagamento, post);
 	res.status(204).end();
 });
 

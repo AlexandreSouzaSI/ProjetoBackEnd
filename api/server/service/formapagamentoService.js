@@ -1,17 +1,17 @@
-const formapagamentoData = require('../data/formapagamentoData')
+const formaPagamentoData = require('../data/formapagamentoData')
 
 exports.getFormapagamento = function () {
-    return formapagamentoData.getFormapagamento();
+    return formaPagamentoData.getFormapagamento();
 };
 
-exports.savePost = function (post) {
-    return formapagamentoData.savePost(post);
+exports.saveFormapagamento = function (post) {
+    return formaPagamentoData.saveFormapagamento(post);
 };
 
 exports.deletePost = function (id_forma_pagamento) {
-    return formapagamentoData.deletePost(id_forma_pagamento);
+    return formaPagamentoData.deleteFormapagamento(id_forma_pagamento);
 };
 
-exports.updatePost = function (id_forma_pagamento, post) {
-	return formapagamentoData.updatePost(id_forma_pagamento, post);
+exports.updateFormapagamento = function (id_forma_pagamento, post) {
+	return formaPagamentoData.updateFormapagamento(id_forma_pagamento, post);
 };

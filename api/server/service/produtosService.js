@@ -1,17 +1,17 @@
 const produtoData = require('../data/produtoData')
 
-exports.getProdutos = function () {
-    return produtoData.getProdutos();
+exports.getProduto = function () {
+    return produtoData.getProduto();
 };
 
-exports.savePost = function (post) {
-    return produtoData.savePost(post);
+exports.saveProduto = function (post) {
+    return produtoData.saveProduto(post);
 };
 
-exports.deletePost = function (id_produto) {
-    return produtoData.deletePost(id_produto);
+exports.deleteProduto = function (id_produto) {
+    return produtoData.deleteProduto(id_produto);
 };
 
-exports.updatePost = function (id_produto, post) {
-	return produtoData.updatePost(id_produto, post);
+exports.updateProduto = function (id_produto, post) {
+	return produtoData.updateProduto(id_produto, post);
 };

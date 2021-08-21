@@ -1,5 +1,5 @@
 
-PUT http://localhost:3000/produtos/alterar/18 HTTP/1.1
+PUT http://localhost:3000/produto/alterar/120 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 ###
 
-PUT http://localhost:3000/usuarios/alterar/5 HTTP/1.1
+PUT http://localhost:3000/usuario/alterar/5 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -37,7 +37,7 @@ Content-Type: application/json
     "date_update": "now()"
 }
 ###
-PUT http://localhost:3000/pedidousuario/alterar/13 HTTP/1.1
+PUT http://localhost:3000/comanda/alterar/13 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -48,7 +48,7 @@ Content-Type: application/json
     "date_update": "now()"
 }
 ###
-PUT http://localhost:3000/pedidoproduto/alterar/10 HTTP/1.1
+PUT http://localhost:3000/itenscomanda/alterar/10 HTTP/1.1
 Content-Type: application/json
 
 {
