@@ -8,10 +8,10 @@ exports.saveItensComanda = function (post) {
     return itensComandaData.saveItensComanda(post);
 };
 
-exports.deleteItensComanda = function (id_comanda, id_produto) {
-    return itensComandaData.deleteItensComanda(id_comanda, id_produto);
+exports.deleteItensComanda = function (post, id_comanda) {
+    return itensComandaData.deleteItensComanda(post, id_comanda);
 };
 
-exports.updateItensComanda = function (id_comanda, id_produto, post) {
-	return itensComandaData.updateItensComanda(id_comanda, id_produto, post);
+exports.updateItensComanda = function (id_comanda, post) {
+	return itensComandaData.updateItensComanda(id_comanda, post);
 };

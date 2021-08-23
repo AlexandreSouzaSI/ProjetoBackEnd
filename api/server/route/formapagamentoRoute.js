@@ -17,7 +17,8 @@ router.post('/formapagamento/inserir', async function (req, res) {
 });
 
 router.delete('/formapagamento/delete/:id_forma_pagamento', async function (req, res) {
-    await formaPagamentoService.deleteFormapagamento(req.params.id_forma_pagamento);
+    const post = req.body;
+    await formaPagamentoService.deleteFormapagamento(post, req.params.id_forma_pagamento);
     res.status(204).end();
 });
 

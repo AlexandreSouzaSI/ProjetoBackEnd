@@ -20,8 +20,9 @@ router.post('/usuario/inserir', async function (req, res) {
     });
 
 router.delete('/usuario/delete/:id_usuario_cadastrado', async function (req, res) {
-    await usuariosService.deleteUsuario(req.params.id_usuario_cadastrado);
-    res.status(204).end();
+    const post = req.body;
+    await usuariosService.deleteUsuario(post, req.params.id_usuario_cadastrado);
+    res.status(204).json(post);
 });
 
 router.put('/usuario/alterar/:id_usuario_cadastrado', async function (req, res) {

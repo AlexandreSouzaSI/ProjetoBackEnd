@@ -8,8 +8,8 @@ exports.saveFormapagamento = function (post) {
     return formaPagamentoData.saveFormapagamento(post);
 };
 
-exports.deletePost = function (id_forma_pagamento) {
-    return formaPagamentoData.deleteFormapagamento(id_forma_pagamento);
+exports.deleteFormapagamento = function (post, id_forma_pagamento) {
+    return formaPagamentoData.deleteFormapagamento(post, id_forma_pagamento);
 };
 
 exports.updateFormapagamento = function (id_forma_pagamento, post) {

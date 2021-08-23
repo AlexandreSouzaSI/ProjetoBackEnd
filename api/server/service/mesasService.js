@@ -8,8 +8,8 @@ exports.saveMesa = function (post) {
     return mesasData.saveMesa(post);
 };
 
-exports.deleteMesa = function (id_mesa) {
-    return mesasData.deleteMesa(id_mesa);
+exports.deleteMesa = function (post, id_mesa) {
+    return mesasData.deleteMesa(post, id_mesa);
 };
 
 exports.updateMesa = function (id_mesa, Mesa) {

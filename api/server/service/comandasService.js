@@ -8,8 +8,8 @@ exports.saveComanda = function (post) {
     return comandasData.saveComanda(post);
 };
 
-exports.deleteComanda = function (id_comanda) {
-    return comandasData.deleteComanda(id_comanda);
+exports.deleteComanda = function (post, id_comanda) {
+    return comandasData.deleteComanda(post, id_comanda);
 };
 
 exports.updateComanda = function (id_usuario_cadastrado, id_forma_pagamento, id_mesa, post, id_comanda) {

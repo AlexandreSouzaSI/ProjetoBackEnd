@@ -17,7 +17,8 @@ router.post('/comanda/inserir', async function (req, res) {
 });
 
 router.delete('/comanda/delete/:id_comanda', async function (req, res) {
-    await comandasService.deleteComanda(req.params.id_comanda);
+    const post = req.body;
+    await comandasService.deleteComanda(post, req.params.id_comanda);
     res.status(204).end();
 });
 

@@ -17,12 +17,8 @@ router.post('/itenscomanda/inserir', async function (req, res) {
 });
 
 router.delete('/itenscomanda/delete/:id_comanda', async function (req, res) {
-    await itensComandaService.deleteItensComanda(req.params.id_comanda);
-    res.status(204).end();
-});
-
-router.delete('/itenscomanda/delete/:id_produto', async function (req, res) {
-    await itensComandaService.deleteItensComanda(req.params.id_produto);
+    const post = req.body;
+    await itensComandaService.deleteItensComanda(post, req.params.id_comanda);
     res.status(204).end();
 });
 

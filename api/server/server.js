@@ -11,6 +11,6 @@ app.use('/', require('./route/formaPagamentoRoute'));
 app.use('/', require('./route/comandasRoute'));
 app.use('/', require('./route/itensComandaRoute'));
 app.use('/', require('./route/relatoriosRoute'));
-
+//app.use('/', require('./route/loginRoute'));
 
 app.listen(3000);

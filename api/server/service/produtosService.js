@@ -8,8 +8,8 @@ exports.saveProduto = function (post) {
     return produtoData.saveProduto(post);
 };
 
-exports.deleteProduto = function (id_produto) {
-    return produtoData.deleteProduto(id_produto);
+exports.deleteProduto = function (post, id_produto) {
+    return produtoData.deleteProduto(post, id_produto);
 };
 
 exports.updateProduto = function (id_produto, post) {

@@ -10,14 +10,15 @@ router.get('/produto', async function (req, res) {
 });
 
 router.post('/produto/inserir', async function (req, res) {
-    const post = req.body ;
+    const post = req.body;
     console.log(post);
     const newPost = await produtosService.saveProduto(post)
     res.status(201).json(newPost);
 });
 
 router.delete('/produto/delete/:id_produto', async function (req, res) {
-    await produtosService.deleteProduto(req.params.id_produto);
+    const post = req.body;
+    await produtosService.deleteProduto(post, req.params.id_produto);
     res.status(204).end();
 });
 

@@ -17,7 +17,8 @@ router.post('/mesa/inserir', async function (req, res) {
 });
 
 router.delete('/mesa/delete/:id_mesa', async function (req, res) {
-    await mesasService.deleteMesa(req.params.id_mesa);
+    const post = req.body ;
+    await mesasService.deleteMesa(post, req.params.id_mesa);
     res.status(204).end();
 });
 

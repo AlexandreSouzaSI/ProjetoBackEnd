@@ -1,24 +1,24 @@
 
-DELETE http://localhost:3000/produto/delete/119
+DELETE http://localhost:3000/produto/delete/1
 
 ###
 
-DELETE http://localhost:3000/usuario/delete/6
+DELETE http://localhost:3000/usuario/delete/3
 
 ###
 
-DELETE http://localhost:3000/mesa/delete/7
+DELETE http://localhost:3000/mesa/delete/2
 
 ###
 
-DELETE http://localhost:3000/formapagamento/delete/3
+DELETE http://localhost:3000/formapagamento/delete/5
 
 ###
 
-DELETE http://localhost:3000/comanda/delete/13
+DELETE http://localhost:3000/comanda/delete/11
 
 ###
 
-DELETE http://localhost:3000/itenscomanda/delete/13
+DELETE http://localhost:3000/itenscomanda/delete/2
 
 ###
